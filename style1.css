@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('backy.jpg'); /* Add your image path here */
+    background-size: cover; /* Make sure the background covers the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background fixed */
+    background-color: rgb(232, 238, 238); /* Fallback color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: white; /* Change the h1 tag color to white */
+}
+
+.input-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin-block: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-container input[type="text"] {
+    width: 70%;
+}
+
+.input-container input[type="button"] {
+    background-color: #3da33d;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 8px;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.input-container input[type="button"]:hover {
+    background-color: #60b160;
+}
+
+ul {
+    width: 70%;
+    max-width: 450px;
+    margin-top: 20px; /* Add some margin-top for spacing */
+}
+
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-block-end: 12px;
+    border-radius: 8px;
+    border: 0.125px solid #a19f9f;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+    animation: slideIn 0.5s ease-in-out; /* Add slide-in animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+ul li:hover {
+    background-color: #cbcaca;
+}
+
+ul li p {
+    flex-grow: 1;
+    padding: 2px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.deleteBtn {
+    color: #ff0000;
+    transition: color 0.3s; /* Add transition effect */
+}
+
+.deleteBtn:hover {
+    color: #ff6666;
+}
+
+.editBtn {
+    color: #008000;
+    transition: color 0.3s; /* Add transition effect */
+}
+
+.editBtn:hover {
+    color: #66b266;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust gap between filter buttons */
+    margin-bottom: 25px;
+}
+
+.filter, .delete-all {
+    color: #eee;
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 100px;
+    border: 2px solid #57ed0ca1;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.filter.active, .filter:hover, .delete-all:hover {
+    background-color: #57ed0ca1;
+}
